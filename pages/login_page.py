@@ -1,5 +1,8 @@
+from selenium import webdriver
 from .base_page import BasePage
 from .locators import LoginPageLocators
+from selenium.common.exceptions import NoSuchElementException
+
 
 
 class LoginPage(BasePage):
@@ -11,12 +14,13 @@ class LoginPage(BasePage):
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
         login_url = self.browser.current_url
-        assert login_url, "Login url is not presented"# True
+        assert "login" in login_url, "Login link is not presented"
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
-        assert True
+        assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), "Login form is not presented"
 
     def should_be_register_form(self):
         # реализуйте проверку, что есть форма регистрации на странице
-        assert True
+        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Register form is not presented"
+        
