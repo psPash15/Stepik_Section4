@@ -14,3 +14,8 @@ class ProductPageLocators():
     ITEM_BASKETNAME = (By.CSS_SELECTOR, '.fade.in .alertinner strong')
     ITEM_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     TOTAL_PRICE = (By.CSS_SELECTOR, '.fade.in .alertinner p strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.fade.in .alertinner strong')
+    
+class BasePageLocators ():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
