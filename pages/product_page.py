@@ -7,7 +7,6 @@ from selenium.common.exceptions import NoAlertPresentException
 
 
 class ProductPage(BasePage, ProductPageLocators):
-
     def add_item(self):
         try:
             self.browser.implicitly_wait(5)
