@@ -33,4 +33,3 @@ class LoginPage(BasePage):
         password_repeat_field.send_keys(password)
         registration_button = self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON)
         registration_button.click()
-#        assert self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON).click(), "Кнопка регистрации не сработала"
